@@ -5,7 +5,8 @@
 #define HY27UT084G2M	0xADDC8425	//MLC, 512 MB, 1 dies, BB check at last page, SLOW nand
 
 /* winbond */
-#define W29N01GV			0xEFF18095
+#define W29N01GV		0xEFF18095
+#define W25N01GV		0x00EFAA21
 
 /* Micorn */
 #define MT29F64G08CBABA	 	0x2C64444B	// Micron 64G	(MLC) 
@@ -22,7 +23,8 @@
 
 static nand_chip_param_T nand_chip_id[] = 
 {
-	{W29N01GV,			0,	0xff, 	0x01, 0x01, 0x01, 0x00,	0,	0,	0,	0,	NULL,NULL,NULL},
+	{W29N01GV,		0,	0xff, 	0x01, 0x01, 0x01, 0x00,	0,	0,	0,	0,	NULL,NULL,NULL},
+	{W25N01GV,		0,	0xff, 	0x01, 0x01, 0x01, 0x00,	0,	0,	0,	0,	NULL,NULL,NULL},
 	{MT29F64G08CBABA,	0,	0x28,	0x01, 0x01, 0x01, 0x28,	1,	1,	0,	7,	NULL,NULL,NULL},
 	{MT29F32G08CBADA,	0,	0x28,	0x00, 0x00, 0x00, 0x28,	1,	1,	0,	7,	NULL,NULL,NULL},
 	/*	Toshiba */
